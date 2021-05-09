@@ -1,7 +1,5 @@
 import os
 
-
-
 ## App settings
 name = "Prueba Aeelen"
 
@@ -17,11 +15,5 @@ code = "https://github.com/Aeelen-Miranda/DashPython/"
 
 #fontawesome = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'
 
-
-
 ## File system
 root = os.path.dirname(os.path.dirname(__file__)) + "/"
-
-
-
-## DB
