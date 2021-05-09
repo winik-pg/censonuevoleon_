@@ -12,8 +12,8 @@ entidades_p= pd.read_csv("https://raw.githubusercontent.com/fdealbam/censo2020/m
 
 
 # Falta un identificador de la base 1) entidad 2)mpios
-df = entidades_s[entidades_s.ENTIDAD == 19]
-df_p = entidades_p[entidades_p.ENTIDAD == 19]
+df = entidades_s[entidades_s.ENTIDAD == 9]
+df_p = entidades_p[entidades_p.ENTIDAD == 9]
 
 
 noment = df.iloc[0]["NOM_ENT"]
@@ -676,7 +676,7 @@ card27 = dbc.Card(
 
 ## Tabla de variablesvar
 row1 = html.Tr([
-                html.Td([dbc.Button([html.H6(className="fas fa-toilet",
+                html.Td([dbc.Button([html.H6(className="fas fa-home",
                                 style={'textAlign': 'left',
                                        "color":"#FBC02D",
                                       "font-size": "40px",
@@ -730,7 +730,7 @@ row2 = html.Tr([
 
 
 row3 = html.Tr([
-                html.Td([dbc.Button([html.H6(className="far fa-lightbulb",
+                html.Td([dbc.Button([html.H6(className="fas fa-home",
                                 style={'textAlign': 'left',
                                        "color":"#FBC02D",
                                       "font-size": "40px",
@@ -756,7 +756,7 @@ row3 = html.Tr([
 
 
 row4 = html.Tr([
-                html.Td([dbc.Button([html.H6(className="fas fa-faucet",
+                html.Td([dbc.Button([html.H6(className="fas fa-home",
                                 style={'textAlign': 'left',
                                        "color":"#FBC02D",
                                       "font-size": "40px",
@@ -782,7 +782,7 @@ row4 = html.Tr([
 
 
 row5 = html.Tr([
-                html.Td([dbc.Button([html.H6(className="fas fa-tint",
+                html.Td([dbc.Button([html.H6(className="fas fa-home",
                                 style={'textAlign': 'left',
                                        "color":"#FBC02D",
                                       "font-size": "40px",
@@ -854,7 +854,7 @@ card3 = dbc.Card(
 card2p3 = dbc.Card(
     dbc.CardBody(
         [
-         dbc.Button((["", html.H3(className="fas fa-wifi", style={"color": "black",
+         dbc.Button((["", html.H3(className="fas fa-wifi", style={"color": "green",
                                                                  "background-color": "light"}),
                  html.H6(" Con internet ",
                         style={"color":"black",
@@ -868,10 +868,10 @@ card2p3 = dbc.Card(
 
             
          dbc.Button((["", html.H3(className="fas fa-tv", 
-                                  style={"color": "lightgray",
+                                  style={"color": "black",
                                          "background-color": "light"}),
                  html.H6(" Con televisor ", 
-                         style={"color":"lightgray",
+                         style={"color":"black",
                                  "font-size":10,
                                 "background-color": "light"}),
                  html.H4([(contelevisor_p),"%"],#"97%",  
@@ -880,10 +880,10 @@ card2p3 = dbc.Card(
                  html.P(f"{int(contelevisor_s):,}",  style={"font-size":10}),                      
         ]),style={ "background-color": "light"}),
 
-         dbc.Button((["", html.H3(className="fas fa-laptop", style={"color": "lightgray",
+         dbc.Button((["", html.H3(className="fas fa-laptop", style={"color": "dark",
                                                                    "background-color": "light"}),
                  html.H6(" Con computadora ",
-                         style={"color":"lightgray",
+                         style={"color":"black",
                                  "font-size":10,
                                 "background-color": "light"}),
                  html.H4([(concomputadora_p),"%"],#"97%",
@@ -896,7 +896,7 @@ card2p3 = dbc.Card(
          dbc.Button((["", html.H3(className="fas fa-mobile-alt", style={"color": "black",
                                                                        "background-color": "light"}),
                  html.H6(" Con celular ",
-                        style={"color":"black",
+                        style={"color":"blue",
                                 "font-size":10,
                                 "background-color": "light"}),
                  html.H4([(concelular_p),"%"],#"97%",
@@ -905,9 +905,12 @@ card2p3 = dbc.Card(
                  html.P(f"{int(concelular_s):,}", style={"font-size":10}),                      
         ]),style={ "background-color": "light"}),
         
-#poner aqui refrigerador            
-         dbc.Button((["", html.H3(className="fas fa-mobile-alt", style={"color": "black",
-                                                                       "background-color": "light"}),
+#poner aqui refrigerador  
+         dbc.Button((["", html.H3(dbc.CardImg(src= "https://raw.githubusercontent.com/fdealbam/nuevoleon/main/application/static/refrigerator-light.svg?raw=true", 
+                                style={"color": "black",
+                                       "height" :"25px",
+                                      "background-clor": "light"})),
+
                  html.H6(" Con refrigerador ",
                         style={"color":"black",
                                 "font-size":10,
@@ -920,8 +923,10 @@ card2p3 = dbc.Card(
             
 
 #poner aqui lavadora            
-         dbc.Button((["", html.H3(className="fas fa-bath", style={"color": "black",
-                                                                       "background-color": "light"}),
+         dbc.Button((["", html.H3(dbc.CardImg(src= "https://raw.githubusercontent.com/fdealbam/censo2020/main/laundry.svg?raw=true", 
+                                style={"color": "black",
+                                       "height" :"25px",
+                                      "background-clor": "light"})),
                       html.H6(" Con lavadora ",
                         style={"color":"black",
                                 "font-size":10,
@@ -934,7 +939,7 @@ card2p3 = dbc.Card(
 
 
 #poner aqui bicicleta            
-         dbc.Button((["", html.H2(className="fas fa-bicycle", style={"color": "black",
+         dbc.Button((["", html.H2(className="fas fa-bicycle", style={"color": "green",
                                                                        "background-color": "light"}),
                  html.H6(" Con bicicleta",
                         style={"color":"black",
@@ -1102,8 +1107,7 @@ row2 = html.Tr([dbc.Alert("Población en hogares con jefatura masculina", color=
 
 row3 = html.Tr([dbc.Alert("Población en hogares con jefatura femenina", color="#E0E0E0",), 
                 html.Td(f"{int(poblacionenhogaresconjefaturafemenina_s):,}"),
-                dbc.Alert([(poblacionenhogaresconjefaturafemenina_p),"%"],
-                          color="light",
+                dbc.Alert([(poblacionenhogaresconjefaturafemenina_p),"%"], color="light",
                         style={"font-size": "35px",
                         "font-weight": 'bold',
                         "color": "#F48FB1",       
@@ -1146,6 +1150,7 @@ card_v_hog_cens = dbc.Card(
     
     style={"width": "50rem", 
           "border": "0",
+           "stripped": True,
           "fill" : "orange"},
 )
 
@@ -1361,10 +1366,10 @@ card_economia_discap = dbc.Card(
                 html.H1(className="fas fa-user-minus", 
                         style={"background-color": "#6A1B9A",
                                "color":"white",
-                               "font-size": "80px",
+                               "font-size": "110px",
                               #'size':'80px',
-                              'text-align': 'right',
-                               #'margin':'auto'
+                              'textAlign': 'center',
+                               #'margin-left':'10px'
                               }),]),),
             html.Br(),
             html.Br(),
@@ -1716,7 +1721,7 @@ hogcensjefgender.update_layout(paper_bgcolor='rgba(0,0,0,0)',
                   margin = dict(autoexpand= False,),
                           showlegend=False),
     
-colors = ['orchid','palegoldenrod']
+colors = ['Blues']
 
 hogcensjefgender.update_traces(rotation=220,
                               pull= [0.1, 0.1],      
@@ -1727,7 +1732,8 @@ hogcensjefgender.update_traces(rotation=220,
 
     
     
-    
+#laundry= href="https://raw.githubusercontent.com/fdealbam/censo2020/main/laundry.svg"
+
     
 ########################################################################
 # A P P 
@@ -1736,8 +1742,11 @@ hogcensjefgender.update_traces(rotation=220,
 
 
 # identificadores
-
+#script src="https://kit.fontawesome.com/5af838325e.js" crossorigin="anonymous"
+#FONT_AWESOME = "https://raw.githubusercontent.com/FortAwesome/Font-Awesome-Pro/master/css/all.css?token=CF2BC7F5-DB01-4107-B1F0-4A52BD57E648"
 FONT_AWESOME = "https://use.fontawesome.com/releases/v5.7.2/css/all.css"
+
+# crossorigin="anonymous"
 server = flask.Flask(__name__)    
 app = dash.Dash(__name__, external_stylesheets=[dbc.themes. 
                                                 LUX, FONT_AWESOME], server=server)
@@ -1766,6 +1775,7 @@ body = html.Div([
                                   "height": "5px"}),
                dbc.Col(html.H4("Reporte estadístico básico de ",
                         style={'offset' : 0, "size": 5,
+                               
                               #"margin-left": "-142px",
                                "font-size": "12px",
                               "color": "grey",
@@ -1774,9 +1784,23 @@ body = html.Div([
                                #"font-weight": 'bold',
                                "font-family": "Montserrat"
                               })),
-           ], justify= "start"),               
-    
-    
+            #mapa de la entidad   
+            dbc.Col(dbc.Button(dbc.CardImg(src="https://github.com/fdealbam/censo2020/blob/b94700a88ff29ebb35f6bc6e578e5c30a0266f40/1nleona.png?raw=true"),
+                         #href="https://censo2020-mexico.herokuapp.com/",
+                               style={"background-color": "transparent"}),
+                      md={"size": 3,},
+                      style= {
+                         
+                          "margin-top": "-32px", 
+                             "display": "block", "position": "relative",
+                              "inline": "block",
+                              "column-break-inside": "avoid",
+                              "margin-left": "-600px",
+                              "margin-bottom": "-230px"
+                             }),
+               
+               
+                      ], justify= "start"),               
     dbc.Row(
            [
                dbc.Col(html.H1(noment,
@@ -1805,26 +1829,16 @@ body = html.Div([
                dbc.Col(html.H6("Fuente: Censo 2020, INEGI",
                         style={ "offset":2, "size": 5, 
                               "margin-left": "162px",
-                               "font-size": "5px",
+                               "font-size": "10px",
                                "height": "40px",
                               "color": "dark",
                               #'textAlign': 'center',
                                #"font-weight": 'bold',
                                "font-family": "Montserrat",
                               },)),
-                      ], justify= "start"),
-    
-    dbc.Row([
-        dbc.Col(dbc.CardImg(src="https://github.com/fdealbam/censo2020/blob/434cb1a45a4e766a1cc6582859bf6d58771416da/1nleona.png?raw=true",
-                        ),width ={ "size": 2,  "offset": 0,
-                                  "height": "1px"},
-               style={'margin-top': '-150px', #arriba
-                       'margin-left': '450px', 
-                       #'width': '382px',
-                       'height': '0px',
-                     })]),
+                      ], justify= "start"),            
                
-#    html.Br(),
+    html.Br(),
     
 
     
@@ -2007,18 +2021,15 @@ body = html.Div([
      ], no_gutters= True, justify= "start",
      className="blockquote",),
 
-
-     dbc.Row(
-           [
-           dbc.Col(dcc.Graph(figure=hogcensjefgender),
-                   width={'size' :3, "offset":0,},
-                   style={"margin-top": "-200px",
-                          'margin-left': '700px', 
-                          'width': '50px',
-                          'height': '10px',}), 
-                    
-            ], #align='start', 
-        justify ="start"),    
+#
+#     dbc.Row(
+#           [
+#           dbc.Col(dcc.Graph(figure=hogcensjefgender),
+#                    style={'size' : 1, "offset":0,
+#                          "margin-top": "-90px"}), 
+#                    
+#            ], #align='start', 
+#        justify ="start"),    
     
     html.Br(),
     html.Br(),
@@ -2041,16 +2052,16 @@ body = html.Div([
            dbc.Col(html.H5([dbc.Badge("Equipo responsable", 
                           href="https://innovation-learning.herokuapp.com/",
                                      )]),
-                  width={'size': 3,  "offset": 4}),
+                  width={'size': 3,  "offset": 4,
+                         #"bg-text" :  "pablo está loquito",
+                        }),
                        ], justify="start",),
     html.Br(),
     html.Br(),
     html.Br(),
 
-    
 
-    
-    html.Br(),
+     html.Br(),
         
             ])
     
@@ -2061,5 +2072,3 @@ app.layout = html.Div(
 
 if __name__ == '__main__':
     app.run_server(use_reloader = False)
- 
-
