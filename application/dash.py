@@ -2,6 +2,12 @@
 
 import os
 import pandas as pd
+import dash
+import matplotlib.pyplot as plt 
+import dash_bootstrap_components as dbc
+import dash_core_components as dcc
+import dash_html_components as html
+from dash.dependencies import Input, Output
 
 #Abre bd
 entidades_s= pd.read_csv("https://raw.githubusercontent.com/fdealbam/censo2020/main/entidades2020.csv")#, encoding= "Latin-1")
@@ -2069,6 +2075,8 @@ body = html.Div([
 app.layout = html.Div(
     [default, body])
 #app.layout = html.Div(children=[html.Img(className='icon')])
+from application.dash import app
+from settings import config
 
 if __name__ == '__main__':
     app.run_server(use_reloader = False)
