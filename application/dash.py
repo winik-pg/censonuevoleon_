@@ -1929,14 +1929,14 @@ body = html.Div([
     
     ################## SECCION 4 (pag1)_VARIABLES DE INTERNET
 
-    dbc.Row([
-        dbc.Col(dbc.Card(card2p3, color="green"),
-         sm={  "offset": 1, }),
-    
-     ], no_gutters= True, justify= "start",
-     className="blockquote",
-     ),
-    html.Br(),
+   # dbc.Row([
+   #     dbc.Col(dbc.Card(card2p3, color="green"),
+   #      sm={  "offset": 1, }),
+   # 
+   #  ], no_gutters= True, justify= "start",
+   #  className="blockquote",
+   #  ),
+   # html.Br(),
     
 
     
